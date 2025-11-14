@@ -1,25 +1,19 @@
 class Pctx < Formula
   desc "Open source framework to connect AI agents to tools and services with code mode"
   homepage "https://portofcontext.com"
-  version "0.1.3"
-  if OS.mac?
-    if Hardware::CPU.arm?
-      url "https://github.com/portofcontext/pctx/releases/download/v0.1.3/pctx-aarch64-apple-darwin.tar.gz"
-      sha256 "cb6998626782eb1846563ddc59428a2cd3d479a8b5dcffe89fc274fa900aff6c"
-    end
-    if Hardware::CPU.intel?
-      url "https://github.com/portofcontext/pctx/releases/download/v0.1.3/pctx-x86_64-apple-darwin.tar.gz"
-      sha256 "108081c2964831a060e65c03ff7e2951a968d909b13b9558c4831b6409630c52"
-    end
+  version "0.1.4"
+  if OS.mac? && Hardware::CPU.arm?
+    url "https://github.com/portofcontext/pctx/releases/download/v0.1.4/pctx-aarch64-apple-darwin.tar.gz"
+    sha256 "ca4ea46ac3ca546a7e0a0a6820a6911eb778c1fc72f387712f4946adfdf62c9f"
   end
   if OS.linux?
     if Hardware::CPU.arm?
-      url "https://github.com/portofcontext/pctx/releases/download/v0.1.3/pctx-aarch64-unknown-linux-gnu.tar.gz"
-      sha256 "19bdedd19346dc3185f972c6d98eb243faede13a8451f5ecebf996d365263b2a"
+      url "https://github.com/portofcontext/pctx/releases/download/v0.1.4/pctx-aarch64-unknown-linux-gnu.tar.gz"
+      sha256 "d22c6682824d1d358758213f5978d177fed5bd2d5c668b953ef2618dfbb0357e"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/portofcontext/pctx/releases/download/v0.1.3/pctx-x86_64-unknown-linux-gnu.tar.gz"
-      sha256 "5009d11358e5815db31f99fe8758ed914f2fbf87a61f6a3fa1e1c14a6824fdef"
+      url "https://github.com/portofcontext/pctx/releases/download/v0.1.4/pctx-x86_64-unknown-linux-gnu.tar.gz"
+      sha256 "d544fbe31f57f72101640fe0b6afb22ffc2018c82bee60a8da0380de26b6e4b8"
     end
   end
   license "MIT"
@@ -27,7 +21,6 @@ class Pctx < Formula
   BINARY_ALIASES = {
     "aarch64-apple-darwin":      {},
     "aarch64-unknown-linux-gnu": {},
-    "x86_64-apple-darwin":       {},
     "x86_64-unknown-linux-gnu":  {},
   }.freeze
 
@@ -48,7 +41,6 @@ class Pctx < Formula
 
   def install
     bin.install "generate-cli-docs", "pctx" if OS.mac? && Hardware::CPU.arm?
-    bin.install "generate-cli-docs", "pctx" if OS.mac? && Hardware::CPU.intel?
     bin.install "generate-cli-docs", "pctx" if OS.linux? && Hardware::CPU.arm?
     bin.install "generate-cli-docs", "pctx" if OS.linux? && Hardware::CPU.intel?
 
