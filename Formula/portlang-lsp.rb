@@ -1,10 +1,10 @@
 class PortlangLsp < Formula
   desc "The portlang-lsp application"
   homepage "https://github.com/portofcontext/portlang"
-  version "0.1.11"
+  version "0.1.12"
   if OS.mac? && Hardware::CPU.arm?
-    url "https://github.com/portofcontext/portlang/releases/download/v0.1.11/portlang-lsp-aarch64-apple-darwin.tar.gz"
-    sha256 "a3d2b51c905444b688a542c712667a70b748a82150d5374e8d2bf238ef21ee1d"
+    url "https://github.com/portofcontext/portlang/releases/download/v0.1.12/portlang-lsp-aarch64-apple-darwin.tar.gz"
+    sha256 "d0730f432d19bdfdda092cd89c631b36cfedd0c42e9eb85e4441faa601328309"
   end
   license any_of: ["MIT", "Apache-2.0"]
 
