@@ -1,10 +1,10 @@
 class Portlang < Formula
   desc "A CLI for building reliable, model-agnostic agents"
   homepage "https://github.com/portofcontext/portlang"
-  version "0.1.10"
+  version "0.1.11"
   if OS.mac? && Hardware::CPU.arm?
-      url "https://github.com/portofcontext/portlang/releases/download/v0.1.10/portlang-aarch64-apple-darwin.tar.gz"
-      sha256 "bae149aeb8b43bdba6eeea75481b64d910d597957f642f22788bbd5669e581b6"
+      url "https://github.com/portofcontext/portlang/releases/download/v0.1.11/portlang-aarch64-apple-darwin.tar.gz"
+      sha256 "2a8a8cc5968b742b79c4a5e6ca9fce2bffeb44d626a7e6d5d8076af8b421225c"
   end
   license any_of: ["MIT", "Apache-2.0"]
 
