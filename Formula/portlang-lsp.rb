@@ -1,19 +1,19 @@
 class PortlangLsp < Formula
   desc "The portlang-lsp application"
   homepage "https://github.com/portofcontext/portlang"
-  version "0.1.17"
+  version "0.1.18"
   if OS.mac? && Hardware::CPU.arm?
-    url "https://github.com/portofcontext/portlang/releases/download/v0.1.17/portlang-lsp-aarch64-apple-darwin.tar.gz"
-    sha256 "264eb267ce714c2bb13aed691e7366a0215b05f66d1e13f0655e09b1b62c2c1e"
+    url "https://github.com/portofcontext/portlang/releases/download/v0.1.18/portlang-lsp-aarch64-apple-darwin.tar.gz"
+    sha256 "229c1cd7b01fb873b5b291b79953de783fe19378a9657bb9e2e4d6d819d98a8b"
   end
   if OS.linux?
     if Hardware::CPU.arm?
-      url "https://github.com/portofcontext/portlang/releases/download/v0.1.17/portlang-lsp-aarch64-unknown-linux-gnu.tar.gz"
-      sha256 "187a69a8f1e52dedcd8dd33b89e29b34062fd49e991f13a7e064da162425a10c"
+      url "https://github.com/portofcontext/portlang/releases/download/v0.1.18/portlang-lsp-aarch64-unknown-linux-gnu.tar.gz"
+      sha256 "775a968aba80e745e3053ac00aacdb4b45a9b1977892f4b85767c3419ded9f38"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/portofcontext/portlang/releases/download/v0.1.17/portlang-lsp-x86_64-unknown-linux-gnu.tar.gz"
-      sha256 "4b74bcdec5e1865aea133e5400791cc596550a170f2d822b601a0f6618b810f0"
+      url "https://github.com/portofcontext/portlang/releases/download/v0.1.18/portlang-lsp-x86_64-unknown-linux-gnu.tar.gz"
+      sha256 "89c555d425bffd51d872aff4eb6c6664612e4ba7fe80e15cd62ddd520e535cbc"
     end
   end
   license any_of: ["MIT", "Apache-2.0"]
