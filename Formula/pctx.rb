@@ -1,19 +1,19 @@
 class Pctx < Formula
   desc "Open source framework to connect AI agents to tools and services with code mode"
   homepage "https://portofcontext.com"
-  version "0.7.5"
+  version "0.7.6"
   if OS.mac? && Hardware::CPU.arm?
-    url "https://github.com/portofcontext/pctx/releases/download/v0.7.5/pctx-aarch64-apple-darwin.tar.gz"
-    sha256 "fb166311db77aae2222318f1f28b6aab0c68093b6d8e3a0777b3c29cf42e54dc"
+    url "https://github.com/portofcontext/pctx/releases/download/v0.7.6/pctx-aarch64-apple-darwin.tar.gz"
+    sha256 "d516196d0d95456634935fc6c47c3ff3b287a6948a68d6fe2616a874b8c8db0f"
   end
   if OS.linux?
     if Hardware::CPU.arm?
-      url "https://github.com/portofcontext/pctx/releases/download/v0.7.5/pctx-aarch64-unknown-linux-gnu.tar.gz"
-      sha256 "63f43c70a6a96f6d13895cdd22d791c15683c86eb1d32d42c0ede1d195f06c19"
+      url "https://github.com/portofcontext/pctx/releases/download/v0.7.6/pctx-aarch64-unknown-linux-gnu.tar.gz"
+      sha256 "5269bd297aa9d9e171fd9f91b3b0f0d75436442db33b612d569885c18988deb4"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/portofcontext/pctx/releases/download/v0.7.5/pctx-x86_64-unknown-linux-gnu.tar.gz"
-      sha256 "b8f8d12bb7b5cef3597242f0fac3dd8e5e77ab944242a4997d1871a2d69910a3"
+      url "https://github.com/portofcontext/pctx/releases/download/v0.7.6/pctx-x86_64-unknown-linux-gnu.tar.gz"
+      sha256 "0efac2e034305799bea00414e5cc48ecee122e98faee63b70084b1179d795c30"
     end
   end
   license "MIT"
